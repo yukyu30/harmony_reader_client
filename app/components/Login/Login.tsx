@@ -1,19 +1,21 @@
 import { useSession, signIn, signOut } from 'next-auth/react';
+import { Text, HStack, Image, Button } from '@kuma-ui/core';
 
 export default function Component() {
   const { data: session } = useSession();
   if (session && session.user) {
     return (
       <>
-        Signed in as {session.user.email} <br />
-        <button onClick={() => signOut()}>Sign out</button>
+        <Button variant="transparent" onClick={() => signOut()}>
+          <HStack justify="center" alignItems="center" gap={8}></HStack>
+        </Button>
+        <Image variant="avatar" src={session.user.image} />
       </>
     );
   }
   return (
-    <>
-      Not signed in <br />
-      <button onClick={() => signIn()}>Sign in</button>
-    </>
+    <Button variant="transparent" onClick={() => signIn()}>
+      Log In
+    </Button>
   );
 }
