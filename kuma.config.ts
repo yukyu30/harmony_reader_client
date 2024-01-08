@@ -78,6 +78,14 @@ const theme = createTheme({
             bg: 'colors.primary-light',
           },
         },
+        secondary: {
+          bg: 'colors.secondary',
+          color: 'colors.text-dark',
+          border: 'none',
+          _hover: {
+            bg: 'colors.secondary-light',
+          },
+        },
         success: {
           bg: 'colors.primary',
           color: 'colors.text-dark',
