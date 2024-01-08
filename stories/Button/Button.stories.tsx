@@ -18,13 +18,13 @@ const meta = {
         'transparent',
         'outlined',
       ],
-      description: 'Buttonの外観を変更します。',
+      description: 'Buttonの外観。',
       table: {
         defaultValue: { summary: 'primary' },
       },
     },
     children: {
-      description: 'Buttonの中身を変更します。',
+      description: 'Buttonの中身。ReactNodeを渡すことができます。',
       control: 'text',
     },
   },
