@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import NextAuthProvider from '@providers/NextAuth';
+import NextAuthProvider from '@/components/providers/NextAuth';
 import { KumaRegistry } from '@kuma-ui/next-plugin/registry';
 import './globals.css';
 

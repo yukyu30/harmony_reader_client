@@ -1,0 +1,20 @@
+import type { Meta, StoryObj } from '@storybook/react';
+import {{pascalCase name}} from '@/components/{{pascalCase name}}';
+import { KumaRegistry } from '@kuma-ui/next-plugin/registry';
+
+const meta = {
+  title: '{{pascalCase name}}',
+  component: {{pascalCase name}},
+  argTypes: {
+  },
+  args: {
+    children: '{{pascalCase name}}',
+  },
+} satisfies Meta<typeof {{pascalCase name}}>;
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
+  render: (args) => <{{pascalCase name}} {...args} />,
+};
