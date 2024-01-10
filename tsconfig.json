@@ -20,7 +20,7 @@
     ],
     "paths": {
       "@/*": ["./app/*"],
-      "@providers/*": ["./app/components/providers/*"]
+      "@providers/*": ["app/components/providers/*"]
     }
   },
   "include": [
@@ -28,7 +28,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "./kuma.config.ts"
+    "./kuma.config.ts",
+    "plopfile.mjs"
   ],
   "exclude": ["node_modules"]
 }
