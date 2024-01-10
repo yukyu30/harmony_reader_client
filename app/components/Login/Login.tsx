@@ -1,5 +1,5 @@
 import { useSession, signIn, signOut } from 'next-auth/react';
-import { Text, HStack, Image, Button } from '@kuma-ui/core';
+import { HStack, Image, Button } from '@kuma-ui/core';
 
 export default function Component() {
   const { data: session } = useSession();
