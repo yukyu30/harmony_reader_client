@@ -20,6 +20,21 @@ export default function (plop) {
         path: './app/components/{{name}}/{{name}}.tsx',
         templateFile: 'plop-templates/component/Component.tsx.hbs',
       },
+      {
+        type: 'add',
+        path: './stories/{{name}}/{{name}}.tsx',
+        templateFile: 'plop-templates/component/Story.tsx.hbs',
+      },
+      {
+        type: 'add',
+        path: './stories/{{name}}/{{name}}.stories.tsx',
+        templateFile: 'plop-templates/component/Story.stories.tsx.hbs',
+      },
+      {
+        type: 'add',
+        path: './stories/{{name}}/Docs.mdx',
+        templateFile: 'plop-templates/component/Docs.mdx.hbs',
+      },
     ],
   });
 }

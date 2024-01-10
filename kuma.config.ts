@@ -53,7 +53,8 @@ const theme = createTheme({
     lg: '3em',
   },
   radii: {
-    md: '0.5rem',
+    md: '0.5em',
+    lg: '0.8em',
     full: '9999px',
   },
   components: {

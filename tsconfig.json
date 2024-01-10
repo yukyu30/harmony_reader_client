@@ -19,8 +19,8 @@
       }
     ],
     "paths": {
-      "@/*": ["./app/*"],
-      "@providers/*": ["app/components/providers/*"]
+      "@/*": ["/app/*"],
+      "@providers/*": ["/app/components/providers/*"]
     }
   },
   "include": [

@@ -1,6 +1,7 @@
 import { signOut } from 'next-auth/react';
 import { Box, VStack, Image, Button, css } from '@kuma-ui/core';
 import { useState, useRef, useEffect } from 'react';
+import Popover from '../Popover';
 
 type Props = {
   avatar?: string;
@@ -32,40 +33,35 @@ export default function UserMenu(props: Props) {
       />
       {OpenMenuPopover && (
         <Box
-          ref={menuRef}
-          border={'1px solid'}
-          borderColor="colors.light-dark"
-          paddingY={8}
-          borderRadius="radii.md"
           className={css`
             position: absolute;
             right: 0px;
           `}
           marginRight="spacings.md"
         >
-          <VStack>
-            <Button
-              variant="transparent"
-              paddingRight="2rem"
-              paddingLeft="1rem"
-              textAlign="left"
-              borderRadius={0}
-              fontSize="fontSizes.sm"
-            >
-              設定
-            </Button>
-            <Button
-              variant="transparent"
-              paddingRight="2rem"
-              paddingLeft="1rem"
-              textAlign="left"
-              borderRadius={0}
-              onClick={() => signOut()}
-              fontSize="fontSizes.sm"
-            >
-              ログアウト
-            </Button>
-          </VStack>
+          <Popover ref={menuRef}>
+            <VStack>
+              <Button
+                variant="transparent"
+                paddingRight="2rem"
+                paddingLeft="1rem"
+                textAlign="left"
+                fontSize="fontSizes.sm"
+              >
+                設定
+              </Button>
+              <Button
+                variant="transparent"
+                paddingRight="2rem"
+                paddingLeft="1rem"
+                textAlign="left"
+                onClick={() => signOut()}
+                fontSize="fontSizes.sm"
+              >
+                ログアウト
+              </Button>
+            </VStack>
+          </Popover>
         </Box>
       )}
     </div>
