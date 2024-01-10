@@ -5,11 +5,7 @@ export default function Logout() {
   const { data: session, status } = useSession();
 
   if (status === 'authenticated') {
-    return (
-      <div>
-        <button onClick={() => signOut()}>ログアウト</button>
-      </div>
-    );
+    return <button onClick={() => signOut()}>ログアウト</button>;
   }
   return null;
 }
