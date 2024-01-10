@@ -10,7 +10,7 @@ export default function Navigation() {
       <Text>Harmony</Text>
 
       {session && session.user ? (
-        <UserMenu avatar={session.user.image} />
+        <UserMenu avatar={session.user?.image ?? undefined} />
       ) : (
         <Button variant="transparent" onClick={() => signIn()}>
           Log In
