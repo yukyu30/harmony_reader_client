@@ -38,8 +38,9 @@ export default function UserMenu(props: Props) {
             right: 0px;
           `}
           marginRight="spacings.md"
+          ref={menuRef}
         >
-          <Popover ref={menuRef}>
+          <Popover>
             <VStack>
               <Button
                 variant="transparent"

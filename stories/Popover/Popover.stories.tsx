@@ -3,7 +3,12 @@ import Popover from '../../app/components/Popover';
 const meta = {
   title: 'Popover',
   component: Popover,
-  argTypes: {},
+  argTypes: {
+    children: {
+      description: 'Popoverの中身。ReactNodeを渡すことができます。',
+      control: 'text',
+    },
+  },
   args: {
     children: 'Popover',
   },
