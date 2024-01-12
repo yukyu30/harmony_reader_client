@@ -11,6 +11,7 @@ export const Popover = (props: Props) => {
       borderColor="colors.light-dark"
       padding={8}
       borderRadius="radii.lg"
+      bg="colors.background"
     >
       {props.children}
     </Box>

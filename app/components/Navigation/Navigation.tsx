@@ -6,16 +6,19 @@ export default function Navigation() {
   const { data: session } = useSession();
 
   return (
-    <HStack justify="space-between" alignItems="center" gap={8} paddingX={8}>
-      <Text>Harmony</Text>
+    <>
+      <HStack justify="space-between" alignItems="center" gap={8} paddingX={8}>
+        <Text>Harmony</Text>
 
-      {session && session.user ? (
-        <UserMenu avatar={session.user?.image ?? undefined} />
-      ) : (
-        <Button variant="transparent" onClick={() => signIn()}>
-          Log In
-        </Button>
-      )}
-    </HStack>
+        {session && session.user ? (
+          <UserMenu avatar={session.user?.image ?? undefined} />
+        ) : (
+          <Button variant="transparent" onClick={() => signIn()}>
+            Log In
+          </Button>
+        )}
+      </HStack>
+      <hr></hr>
+    </>
   );
 }
