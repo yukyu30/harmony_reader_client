@@ -36,14 +36,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
-  render: (args) => <Button {...args} />,
-};
-
 export const Primary: Story = {
-  args: {
-    variant: 'primary',
-  },
   render: (args) => <Button {...args} />,
 };
 
