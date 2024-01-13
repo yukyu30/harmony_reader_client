@@ -2,6 +2,7 @@ import { Meta, Primary, Controls, Story } from '@storybook/blocks';
 import * as PopoverStories from './Popover.stories';
 import { Button } from '@kuma-ui/core';
 import Popover from './Popover';
+import { useRef } from 'react';
 
 <Meta of={PopoverStories} />
 
@@ -14,4 +15,18 @@ Popoverはユーザーの操作により非表示できなければなりませ�
 
 ## Props
 
+export const PopoverExample = () => {
+  const elementRef = useRef(null);
+
+return (
+
+<>
+  <Button variants="primary" ref={elementRef}>
+    Open
+  </Button>
+  <Popover anchorElement={elementRef}>Hello!! </Popover>
+</>
+); };
+
+<PopoverExample />
 <Controls />

@@ -22,17 +22,12 @@ export default function (plop) {
       },
       {
         type: 'add',
-        path: './stories/{{name}}/{{name}}.tsx',
-        templateFile: 'plop-templates/component/Story.tsx.hbs',
-      },
-      {
-        type: 'add',
-        path: './stories/{{name}}/{{name}}.stories.tsx',
+        path: './app/components/{{name}}/{{name}}.stories.tsx',
         templateFile: 'plop-templates/component/Story.stories.tsx.hbs',
       },
       {
         type: 'add',
-        path: './stories/{{name}}/Docs.mdx',
+        path: './app/components/{{name}}/Docs.mdx',
         templateFile: 'plop-templates/component/Docs.mdx.hbs',
       },
     ],
