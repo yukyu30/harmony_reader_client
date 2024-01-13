@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Skeleton } from './Skeleton';
-import { KumaRegistry } from '@kuma-ui/next-plugin/registry';
 
 const meta = {
   title: 'Skeleton',
