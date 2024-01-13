@@ -33,6 +33,7 @@ const theme = createTheme({
     text: '#3F3F3F',
     'text-dark': '#fff',
     'text-light': '#3F3F3F',
+    background: '#fff',
   },
   fontSizes: {
     xs: '12px',
@@ -53,7 +54,8 @@ const theme = createTheme({
     lg: '3em',
   },
   radii: {
-    md: '0.5rem',
+    md: '0.5em',
+    lg: '0.8em',
     full: '9999px',
   },
   components: {
@@ -119,7 +121,7 @@ const theme = createTheme({
           },
         },
         outlined: {
-          bg: 'white',
+          bg: 'colors.background',
           borderWidth: '1px',
           borderStyle: 'solid',
           borderColor: 'colors.light-dark',
