@@ -3,7 +3,6 @@ import GoogleProvider from 'next-auth/providers/google';
 import { Session, User } from 'next-auth';
 import * as jose from 'jose';
 import { JWT } from 'next-auth/jwt';
-import { Tilt_Prism } from 'next/font/google';
 
 export const authOptions = {
   secret: process.env.NEXTAUTH_SECRET,
