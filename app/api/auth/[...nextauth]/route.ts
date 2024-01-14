@@ -26,16 +26,16 @@ export const authOptions = {
           sub: token.sub,
           email: token.email,
         };
-
-        const secret = new TextEncoder().encode(String(process.env.APP_SECRET));
-
+        c;
+        const secret = new TextEncoder().encode(String(process.env.JWT_SECRET));
         const alg = 'HS256';
 
         const appAccessToken = await new jose.SignJWT(payload)
           .setProtectedHeader({ alg })
-          .setExpirationTime('30d')
+          .setExpirationTime(process.env.JWT_EXPIRATION_TIME || '30d')
           .setJti(String(token.jti))
           .sign(secret);
+
         return Promise.resolve({
           ...session,
           appAccessToken: appAccessToken,
