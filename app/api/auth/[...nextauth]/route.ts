@@ -26,7 +26,7 @@ export const authOptions = {
           sub: token.sub,
           email: token.email,
         };
-        c;
+
         const secret = new TextEncoder().encode(String(process.env.JWT_SECRET));
         const alg = 'HS256';
 
