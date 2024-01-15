@@ -20,7 +20,7 @@
     ],
     "paths": {
       "@/*": ["./app/*"],
-      "@providers/*": ["./app/components/providers/*"]
+      "@lib/*": ["./lib/*"]
     }
   },
   "include": [

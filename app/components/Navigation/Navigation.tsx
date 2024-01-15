@@ -46,6 +46,7 @@ export default function Navigation() {
                 onClick={() => setOpenMenuPopover(!OpenMenuPopover)}
                 ref={avatarRef}
               />
+
               {OpenMenuPopover && (
                 <Popover
                   anchorElement={avatarRef}

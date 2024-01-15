@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import NextAuthProvider from '@/providers/NextAuth';
+import NextAuthProvider from '@lib/providers/NextAuth';
+import { ApolloWrapper } from '@lib/ApolloWrapper';
 import { KumaRegistry } from '@kuma-ui/next-plugin/registry';
 import './globals.css';
 
@@ -20,7 +21,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <NextAuthProvider>
-          <KumaRegistry>{children}</KumaRegistry>
+          <ApolloWrapper>
+            <KumaRegistry>{children}</KumaRegistry>
+          </ApolloWrapper>
         </NextAuthProvider>
       </body>
     </html>
