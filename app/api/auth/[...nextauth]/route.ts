@@ -30,7 +30,7 @@ export const authOptions = {
         const secret = new TextEncoder().encode(String(process.env.JWT_SECRET));
         const alg = 'HS256';
 
-        const appAccessToken = await new jose.SignJWT(payload)
+        const accessToken = await new jose.SignJWT(payload)
           .setProtectedHeader({ alg })
           .setExpirationTime(process.env.JWT_EXPIRATION_TIME || '30d')
           .setJti(String(token.jti))
@@ -38,7 +38,7 @@ export const authOptions = {
 
         return Promise.resolve({
           ...session,
-          appAccessToken: appAccessToken,
+          accessToken: accessToken,
         });
       }
 
